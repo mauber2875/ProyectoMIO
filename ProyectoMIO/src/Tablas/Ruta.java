@@ -11,4 +11,30 @@ package Tablas;
  */
 public class Ruta {
     
+    private String nombre;
+    private String[] lugar;
+    
+    public void Ruta(String nombre, String[] lugar) {
+        
+        this.nombre = nombre;
+        this.lugar = lugar;
+        
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setLugar(String[] lugar) {
+        this.lugar = lugar;
+    }
+
+    public String[] getLugar() {
+        return lugar;
+    }           
+    
 }

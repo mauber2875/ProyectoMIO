@@ -11,4 +11,50 @@ package Tablas;
  */
 public class Tarjeta {
     
+    private String id;
+    private double saldo;
+    private String estado;
+    private String puntoVenta;
+    
+    public void Tarjeta(String id, double saldo, String estado, String puntoVenta) {
+        
+        this.id = id;
+        this.saldo = saldo;
+        this.estado = estado;
+        this.puntoVenta = puntoVenta;
+        
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setPuntoVenta(String puntoVenta) {
+        this.puntoVenta = puntoVenta;
+    }
+
+    public String getPuntoVenta() {
+        return puntoVenta;
+    }   
+    
 }
