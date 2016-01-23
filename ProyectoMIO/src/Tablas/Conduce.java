@@ -17,7 +17,7 @@ public class Conduce {
     private String horaEntrada;
     private String horaSalida;
     
-    public void Conduce(String cedulaEmpleado, String placaBus, String fecha, String horaEntrada, String horaSalida) {
+    public Conduce(String cedulaEmpleado, String placaBus, String fecha, String horaEntrada, String horaSalida) {
         
         this.cedulaEmpleado = cedulaEmpleado;
         this.placaBus = placaBus;

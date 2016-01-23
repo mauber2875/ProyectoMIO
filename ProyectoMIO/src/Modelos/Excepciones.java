@@ -9,6 +9,12 @@ package Modelos;
  *
  * @author jesusaro
  */
-public class MyException {
+public class Excepciones extends Exception {
+    
+    public Excepciones(String mensaje) {
+        
+        super(mensaje);
+        
+    }
     
 }

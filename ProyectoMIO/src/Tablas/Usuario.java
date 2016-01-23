@@ -17,7 +17,7 @@ public class Usuario {
     private String telefono;
     private String direccion;
     
-    public void Usuario(String cedula, String idTarjeta, String nombre, String telefono, String direccion) {
+    public Usuario(String cedula, String idTarjeta, String nombre, String telefono, String direccion) {
         
         this.cedula = cedula;
         this.idTarjeta = idTarjeta;

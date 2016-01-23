@@ -16,7 +16,7 @@ public class Distribuidor {
     private String direccion;
     private String telefono;
     
-    public void Distribuidor(String nit, String nombre, String direccion, String telefono) {
+    public Distribuidor(String nit, String nombre, String direccion, String telefono) {
      
         this.nit = nit;
         this.nombre = nombre;

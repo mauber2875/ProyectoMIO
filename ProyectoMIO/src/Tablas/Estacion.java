@@ -17,7 +17,7 @@ public class Estacion {
     private int paradaRuta;
     private String nombreRuta;
     
-    public void Estacion(String nombre, String direccion, String cedulaDirector, int paradaRuta, String nombreRuta) {
+    public Estacion(String nombre, String direccion, String cedulaDirector, int paradaRuta, String nombreRuta) {
      
         this.nombre = nombre;
         this.direccion = direccion;

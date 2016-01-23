@@ -5,6 +5,7 @@
  */
 package DataAccessObject;
 
+import Modelos.Excepciones;
 import java.sql.Connection;
 import java.sql.Statement;
 
@@ -28,7 +29,12 @@ public class Fachada {
         
     }
     
-    
+    public Connection conexion() throws Excepciones {
+        
+        Class.forName("org.postgresql.Driver");
+        conexion = DriverManager
+        
+    }
     
     
 }

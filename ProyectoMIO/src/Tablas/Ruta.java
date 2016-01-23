@@ -14,7 +14,7 @@ public class Ruta {
     private String nombre;
     private String[] lugar;
     
-    public void Ruta(String nombre, String[] lugar) {
+    public Ruta(String nombre, String[] lugar) {
         
         this.nombre = nombre;
         this.lugar = lugar;

@@ -9,6 +9,8 @@ package DataAccessObject;
  *
  * @author jesusaro
  */
-public class DaoBus {
+public class DaoBus extends DataAccessObject {
+    
+    
     
 }

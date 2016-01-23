@@ -19,7 +19,7 @@ public class Bus {
     private int paradaRuta;
     private String nombreRuta;
     
-    public void Bus(String placa, String modelo, String marca, int capacidad, String tipo, int paradaRuta, String nombreRuta) {
+    public Bus(String placa, String modelo, String marca, int capacidad, String tipo, int paradaRuta, String nombreRuta) {
         
         this.placa = placa;
         this.modelo = modelo;

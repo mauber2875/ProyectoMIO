@@ -20,7 +20,7 @@ public class Pqrs {
     private String cedulaUsuario;
     private String descripcion;
     
-    public void Pqrs(int id, String cedulaEmpleado, String nombreEstacion, String estado, String fecha, String motivo, String cedulaUsuario, String descripcion) {
+    public Pqrs(int id, String cedulaEmpleado, String nombreEstacion, String estado, String fecha, String motivo, String cedulaUsuario, String descripcion) {
         
         this.id = id;
         this.cedulaEmpleado = cedulaEmpleado;

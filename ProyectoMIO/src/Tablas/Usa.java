@@ -17,7 +17,7 @@ public class Usa {
     private String nombreRuta;
     private String fecha;
     
-    public void Usa(int id, String idTarjeta, int paradaRuta, String nombreRuta, String fecha) {
+    public Usa(int id, String idTarjeta, int paradaRuta, String nombreRuta, String fecha) {
         
         this.id = id;
         this.idTarjeta = idTarjeta;

@@ -16,7 +16,7 @@ public class Tarjeta {
     private String estado;
     private String puntoVenta;
     
-    public void Tarjeta(String id, double saldo, String estado, String puntoVenta) {
+    public Tarjeta(String id, double saldo, String estado, String puntoVenta) {
         
         this.id = id;
         this.saldo = saldo;
