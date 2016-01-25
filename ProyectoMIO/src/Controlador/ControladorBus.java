@@ -23,9 +23,23 @@ public class ControladorBus {
         
     }
     
-    public void crearBus(String informacion[]) throws Excepciones {
+    public void guardarBus(String informacion[]) throws Excepciones {
         
         Bus nuevoBus = new Bus(informacion[0], informacion[1], informacion[2], Integer.parseInt(informacion[3]), informacion[4], Integer.parseInt(informacion[5]), informacion[6]); 
+        daoBus.guardarBus(nuevoBus);
+        
+    }
+    
+    public void modificarBus(String informacion[]) throws Excepciones {
+        
+        Bus nuevosDatosBus = new Bus(informacion[0], informacion[1], informacion[2], Integer.parseInt(informacion[3]), informacion[4], Integer.parseInt(informacion[5]), informacion[6]); 
+        daoBus.modificarBus(nuevosDatosBus);
+        
+    }
+    
+    public void eliminarBus(String placa) {
+        
+        
         
     }
     
