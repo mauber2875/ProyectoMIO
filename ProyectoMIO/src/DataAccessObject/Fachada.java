@@ -7,6 +7,8 @@ package DataAccessObject;
 
 import Modelos.Excepciones;
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
@@ -29,12 +31,34 @@ public class Fachada {
         
     }
     
-    public Connection conexion() throws Excepciones {
+    public Connection conectar() throws Excepciones {
         
-        Class.forName("org.postgresql.Driver");
-        conexion = DriverManager
+        try {
+            
+            Class.forName("org.postgresql.Driver");
+            conexion = DriverManager.getConnection(url, usuario, contraseña);
+
+            return conexion;
+        
+        } catch (SQLException ex) {
+            System.out.println("No se pudo conectar a la BD: " + ex.getMessage());
+            throw new Excepciones("No se pudo conectar a la BD: " + ex.getMessage());
+        } catch (ClassNotFoundException ex) {
+            throw new Excepciones("No se pudo conectar a la BD: " + ex.getMessage());
+        }
         
     }
     
+    public void desconectar(Connection conexion) throws SQLException {
+        
+        try {
+            
+            conexion.close();
+            
+        } catch (SQLException ex) {
+            System.out.println("No se pudo desconectar de la BD: " + ex.getMessage());
+        }
+        
+    }    
     
 }
