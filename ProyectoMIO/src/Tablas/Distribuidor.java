@@ -15,6 +15,7 @@ public class Distribuidor {
     private String nombre;
     private String direccion;
     private String telefono;
+    private char eliminado;
     
     public Distribuidor(String nit, String nombre, String direccion, String telefono) {
      
@@ -22,6 +23,7 @@ public class Distribuidor {
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
+        this.eliminado = '0';        
         
     }
 
@@ -41,10 +43,10 @@ public class Distribuidor {
         return nombre;
     }
 
-    public String setDireccion() {
-        return direccion;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
-
+    
     public String getDireccion() {
         return direccion;
     }
@@ -56,5 +58,13 @@ public class Distribuidor {
     public String getTelefono() {
         return telefono;
     }
-    
+
+    public void setEliminado(char eliminado) {
+        this.eliminado = eliminado;
+    }
+
+    public char getEliminado() {
+        return eliminado;
+    }     
+        
 }

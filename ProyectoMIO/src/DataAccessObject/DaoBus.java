@@ -7,6 +7,7 @@ package DataAccessObject;
 
 import Modelos.Excepciones;
 import Tablas.Bus;
+import java.util.ArrayList;
 
 /**
  *
@@ -31,7 +32,8 @@ public class DaoBus extends DataAccessObject {
                 + bus.getCapacidad() + "', '"
                 + bus.getTipo() + "', '"
                 + bus.getParadaRuta() + "', '"
-                + bus.getNombreRuta() + "');";
+                + bus.getNombreRuta() + "', '"
+                + bus.getEliminado() + "');";
         
         executeUpdate(sql);
         
@@ -44,12 +46,29 @@ public class DaoBus extends DataAccessObject {
                 + "marca = '" + bus.getMarca() + "', "
                 + "capacidad = '" + bus.getCapacidad() + "', "
                 + "tipo = '" + bus.getTipo() + "', "
-                + "parada_ruta = '" + bus.getParadaRuta() + "', '"
-                + "nombre_ruta = '" + bus.getNombreRuta() + "' "
+                + "parada_ruta = '" + bus.getParadaRuta() + "', "
+                + "nombre_ruta = '" + bus.getNombreRuta() + "', "
+                + "eliminado = '" + bus.getEliminado() + "' "
                 + "WHERE placa_bus = '" + bus.getPlaca() + "';";
         
         executeUpdate(sql);
         
+    }
+    
+    public void eliminarBus(String placa) throws Excepciones {
+        
+        sql = "UPDATE bus SET eliminado = '1' WHERE placa_bus = '" + placa + "';";
+        
+        executeUpdate(sql);
+        
+    }
+    
+    public ArrayList<Object[]> listarBuses() throws Excepciones {
+        
+        sql = "SELECT * FROM bus WHERE eliminado<>'1'";
+        
+        return executeQuery(sql, 8);
+                
     }
     
 }

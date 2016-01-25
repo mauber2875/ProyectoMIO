@@ -15,6 +15,7 @@ public class Tarjeta {
     private double saldo;
     private String estado;
     private String puntoVenta;
+    private char eliminada;
     
     public Tarjeta(String id, double saldo, String estado, String puntoVenta) {
         
@@ -22,6 +23,7 @@ public class Tarjeta {
         this.saldo = saldo;
         this.estado = estado;
         this.puntoVenta = puntoVenta;
+        this.eliminada = '0';
         
     }
 
@@ -56,5 +58,13 @@ public class Tarjeta {
     public String getPuntoVenta() {
         return puntoVenta;
     }   
+
+    public void setEliminada(char eliminada) {
+        this.eliminada = eliminada;
+    }
+
+    public char getEliminada() {
+        return eliminada;
+    }    
     
 }

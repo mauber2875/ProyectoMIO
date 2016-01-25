@@ -18,6 +18,7 @@ public class Bus {
     private String tipo;
     private int paradaRuta;
     private String nombreRuta;
+    private char eliminado;
     
     public Bus(String placa, String modelo, String marca, int capacidad, String tipo, int paradaRuta, String nombreRuta) {
         
@@ -28,6 +29,8 @@ public class Bus {
         this.tipo = tipo;
         this.paradaRuta = paradaRuta;
         this.nombreRuta = nombreRuta;
+        this.eliminado = '0';
+        
     }
 
     public void setPlaca(String placa) {
@@ -85,5 +88,13 @@ public class Bus {
     public String getNombreRuta() {
         return nombreRuta;
     }    
-    
+
+    public void setEliminado(char eliminado) {
+        this.eliminado = eliminado;
+    }
+
+    public char getEliminado() {
+        return eliminado;
+    }  
+        
 }

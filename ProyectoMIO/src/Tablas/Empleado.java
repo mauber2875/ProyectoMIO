@@ -18,6 +18,7 @@ public class Empleado {
     private String fechaNacimiento;
     private String estadoCivil;
     private String cargo;
+    private char eliminado;
     
     public Empleado(String cedula, double salario, String nombre, String telefono, String fechaNacimiento, String estadoCivil, String cargo) {
         
@@ -28,6 +29,7 @@ public class Empleado {
         this.fechaNacimiento = fechaNacimiento;
         this.estadoCivil = estadoCivil;
         this.cargo = cargo;
+        this.eliminado = '0';
         
     }
 
@@ -86,5 +88,13 @@ public class Empleado {
     public String getCargo() {
         return cargo;
     }  
+
+    public void setEliminado(char eliminado) {
+        this.eliminado = eliminado;
+    }
+
+    public char getEliminado() {
+        return eliminado;
+    }    
     
 }

@@ -16,6 +16,7 @@ public class Estacion {
     private String cedulaDirector;
     private int paradaRuta;
     private String nombreRuta;
+    private char eliminada;
     
     public Estacion(String nombre, String direccion, String cedulaDirector, int paradaRuta, String nombreRuta) {
      
@@ -24,6 +25,7 @@ public class Estacion {
         this.cedulaDirector = cedulaDirector;
         this.paradaRuta = paradaRuta;
         this.nombreRuta = nombreRuta;
+        this.eliminada = '0';
         
     }
 
@@ -66,5 +68,13 @@ public class Estacion {
     public String getNombreRuta() {
         return nombreRuta;
     }   
+
+    public void setEliminada(char eliminada) {
+        this.eliminada = eliminada;
+    }
+
+    public char getEliminada() {
+        return eliminada;
+    }    
     
 }

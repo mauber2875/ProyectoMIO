@@ -16,6 +16,7 @@ public class Usuario {
     private String nombre;
     private String telefono;
     private String direccion;
+    private char eliminado;
     
     public Usuario(String cedula, String idTarjeta, String nombre, String telefono, String direccion) {
         
@@ -24,6 +25,7 @@ public class Usuario {
         this.nombre = nombre;
         this.telefono = telefono;
         this.direccion = direccion;
+        this.eliminado = '0';
         
     }
 
@@ -65,6 +67,14 @@ public class Usuario {
 
     public String getDireccion() {
         return direccion;
+    }    
+
+    public void setEliminado(char eliminado) {
+        this.eliminado = eliminado;
+    }
+
+    public char getEliminado() {
+        return eliminado;
     }    
     
 }

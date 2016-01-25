@@ -19,6 +19,7 @@ public class Pqrs {
     private String motivo;
     private String cedulaUsuario;
     private String descripcion;
+    private char eliminada;
     
     public Pqrs(int id, String cedulaEmpleado, String nombreEstacion, String estado, String fecha, String motivo, String cedulaUsuario, String descripcion) {
         
@@ -30,6 +31,7 @@ public class Pqrs {
         this.motivo = motivo;
         this.cedulaUsuario = cedulaUsuario;
         this.descripcion = descripcion;
+        this.eliminada = '0';
         
     }
 
@@ -96,5 +98,13 @@ public class Pqrs {
     public String getDescripcion() {
         return descripcion;
     }   
+
+    public void setEliminada(char eliminada) {
+        this.eliminada = eliminada;
+    }
+
+    public char getEliminada() {
+        return eliminada;
+    }    
     
 }

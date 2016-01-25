@@ -8,6 +8,7 @@ package Controlador;
 import DataAccessObject.DaoBus;
 import Modelos.Excepciones;
 import Tablas.Bus;
+import java.util.ArrayList;
 
 /**
  *
@@ -37,9 +38,37 @@ public class ControladorBus {
         
     }
     
-    public void eliminarBus(String placa) {
+    public void eliminarBus(String placa) throws Excepciones {
         
+        daoBus.eliminarBus(placa);
         
+    }
+    
+    public Bus[] listarBuses() throws Excepciones {
+        
+        ArrayList<Object[]> listaBuses = daoBus.listarBuses();
+        
+        Bus[] buses = new Bus[listaBuses.size()];
+        
+        for (int i=0; i<listaBuses.size(); i++) {
+            
+            Object[] informacionBus = listaBuses.get(i);
+            
+            Bus nuevoBus = new Bus(
+                                   (String) informacionBus[0],
+                                   (String) informacionBus[1],
+                                   (String) informacionBus[2],
+                                   Integer.parseInt((String) informacionBus[3]),
+                                   (String) informacionBus[4],
+                                   Integer.parseInt((String) informacionBus[5]),
+                                   (String) informacionBus[6]
+                                   );
+            
+            buses[i] = nuevoBus;
+                    
+        }
+        
+        return buses;
         
     }
     

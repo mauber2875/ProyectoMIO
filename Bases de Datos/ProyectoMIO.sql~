@@ -172,7 +172,7 @@ CREATE TABLE pqrs
 	motivo VARCHAR(100) NOT NULL,
 	cedula_usuario VARCHAR(50) NOT NULL,
 	descripcion VARCHAR(100),
-	eliminada CHAR NOT NULL,
+	eliminado CHAR NOT NULL,
 
 	CONSTRAINT pqrs_pk PRIMARY KEY (id_pqrs),
 
