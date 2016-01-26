@@ -25,13 +25,13 @@ public class Fachada {
     public Fachada() {
         
         //Conexión a la base de datos JESUSARO de la Universidad 
-        /*url = "jdbc:postgresql://pgsql:5432/jesusaro";
-        usuario = "jesusaro";
-        contraseña = "jesusaro";*/
-        
-        url = "jdbc:postgresql://localhost:5432/mio";
+        url = "jdbc:postgresql://pgsql:5432/jesusaro";
         usuario = "jesusaro";
         contraseña = "jesusaro";
+        
+        /*url = "jdbc:postgresql://localhost:5432/mio";
+        usuario = "jesusaro";
+        contraseña = "jesusaro";*/
         
     }
     

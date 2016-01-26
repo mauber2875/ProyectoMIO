@@ -22,7 +22,7 @@ public class Main {
         
         /*String[] informacionBus = new String[7];
         
-        informacionBus[0] = "4321BUS";
+        informacionBus[0] = "54321BUS";
         informacionBus[1] = "2010";
         informacionBus[2] = "Mazda";
         informacionBus[3] = "120";
@@ -57,11 +57,7 @@ public class Main {
         modificarBus[4] = "Ali"; 
         modificarBus[5] = "1";
         modificarBus[6] = "A01";
-        
-        bus.modificarBus(modificarBus);
-        
-        bus.eliminarBus("12345BUS");
-        
+                        
         Bus[] buses = bus.listarBuses();
         
         String mensaje = ""; 
