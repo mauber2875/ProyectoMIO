@@ -13,13 +13,11 @@ public class Ruta {
     
     private String nombre;
     private String[] lugar;
-    private char eliminada;
-    
+        
     public Ruta(String nombre, String[] lugar) {
         
         this.nombre = nombre;
         this.lugar = lugar;
-        this.eliminada = '0';
         
     }
 
@@ -38,13 +36,5 @@ public class Ruta {
     public String[] getLugar() {
         return lugar;
     }    
-
-    public void setEliminada(char eliminada) {
-        this.eliminada = eliminada;
-    }
-
-    public char getEliminada() {
-        return eliminada;
-    }  
-        
+    
 }

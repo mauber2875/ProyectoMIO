@@ -33,6 +33,21 @@ public class Main {
         
         bus.guardarBus(informacionBus);*/
         
+        Bus busBuscado = bus.buscarBus("54321BUS");
+        
+        String mensaje0 = "";
+        
+        mensaje0 += "Bus Buscado: \n"
+                    + busBuscado.getPlaca() + "\n"
+                    + busBuscado.getModelo() + "\n"
+                    + busBuscado.getMarca() + "\n"
+                    + busBuscado.getCapacidad() + "\n"
+                    + busBuscado.getTipo() + "\n"
+                    + busBuscado.getParadaRuta() + "\n"
+                    + busBuscado.getNombreRuta() + "\n\n";
+        
+        System.out.println(mensaje0);
+        
         String[] modificarBus = new String[7];
         
         modificarBus[0] = "12345BUS";

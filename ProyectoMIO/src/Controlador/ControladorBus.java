@@ -26,14 +26,56 @@ public class ControladorBus {
     
     public void guardarBus(String informacion[]) throws Excepciones {
         
-        Bus nuevoBus = new Bus(informacion[0], informacion[1], informacion[2], Integer.parseInt(informacion[3]), informacion[4], Integer.parseInt(informacion[5]), informacion[6]); 
+        Bus nuevoBus = new Bus(
+                               informacion[0], 
+                               informacion[1], 
+                               informacion[2], 
+                               Integer.parseInt(informacion[3]), 
+                               informacion[4], 
+                               Integer.parseInt(informacion[5]), 
+                               informacion[6]
+                              );
+        
         daoBus.guardarBus(nuevoBus);
         
     }
     
+    public Bus buscarBus(String placa) throws Excepciones {
+        
+        try{
+            
+            Object[] bus = daoBus.buscarBus(placa).get(0);
+
+            Bus busBuscado = new Bus(
+                                     (String) bus[0],
+                                     (String) bus[1],
+                                     (String) bus[2],
+                                     Integer.parseInt((String) bus[3]),
+                                     (String) bus[4],
+                                     Integer.parseInt((String) bus[5]),
+                                     (String) bus[6]
+                                    );
+
+            return busBuscado;
+            
+        } catch (IndexOutOfBoundsException ex) {
+            throw new Excepciones("El bus con la placa " + placa + " no existe..." + ex.getMessage());
+        }
+                
+    }
+    
     public void modificarBus(String informacion[]) throws Excepciones {
         
-        Bus nuevosDatosBus = new Bus(informacion[0], informacion[1], informacion[2], Integer.parseInt(informacion[3]), informacion[4], Integer.parseInt(informacion[5]), informacion[6]); 
+        Bus nuevosDatosBus = new Bus(
+                                     informacion[0], 
+                                     informacion[1], 
+                                     informacion[2], 
+                                     Integer.parseInt(informacion[3]), 
+                                     informacion[4], 
+                                     Integer.parseInt(informacion[5]), 
+                                     informacion[6]
+                                    ); 
+        
         daoBus.modificarBus(nuevosDatosBus);
         
     }
@@ -62,7 +104,7 @@ public class ControladorBus {
                                    (String) informacionBus[4],
                                    Integer.parseInt((String) informacionBus[5]),
                                    (String) informacionBus[6]
-                                   );
+                                  );
             
             buses[i] = nuevoBus;
                     

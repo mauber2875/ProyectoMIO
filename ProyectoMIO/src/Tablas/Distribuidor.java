@@ -15,16 +15,14 @@ public class Distribuidor {
     private String nombre;
     private String direccion;
     private String telefono;
-    private char eliminado;
-    
+        
     public Distribuidor(String nit, String nombre, String direccion, String telefono) {
      
         this.nit = nit;
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
-        this.eliminado = '0';        
-        
+            
     }
 
     public void setNit(String nit) {
@@ -57,14 +55,6 @@ public class Distribuidor {
 
     public String getTelefono() {
         return telefono;
-    }
-
-    public void setEliminado(char eliminado) {
-        this.eliminado = eliminado;
-    }
-
-    public char getEliminado() {
-        return eliminado;
     }     
-        
+       
 }

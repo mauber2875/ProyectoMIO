@@ -16,8 +16,7 @@ public class Usa {
     private int paradaRuta;
     private String nombreRuta;
     private String fecha;
-    private char eliminado;
-    
+        
     public Usa(int id, String idTarjeta, int paradaRuta, String nombreRuta, String fecha) {
         
         this.id = id;
@@ -25,7 +24,6 @@ public class Usa {
         this.paradaRuta = paradaRuta;
         this.nombreRuta = nombreRuta;
         this.fecha = fecha;
-        this.eliminado = '0';
         
     }   
 
@@ -69,12 +67,4 @@ public class Usa {
         return fecha;
     }    
 
-    public void setEliminado(char eliminado) {
-        this.eliminado = eliminado;
-    }
-
-    public char getEliminado() {
-        return eliminado;
-    }    
-    
 }

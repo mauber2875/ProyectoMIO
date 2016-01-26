@@ -15,15 +15,13 @@ public class Tarjeta {
     private double saldo;
     private String estado;
     private String puntoVenta;
-    private char eliminada;
-    
+        
     public Tarjeta(String id, double saldo, String estado, String puntoVenta) {
         
         this.id = id;
         this.saldo = saldo;
         this.estado = estado;
         this.puntoVenta = puntoVenta;
-        this.eliminada = '0';
         
     }
 
@@ -59,12 +57,4 @@ public class Tarjeta {
         return puntoVenta;
     }   
 
-    public void setEliminada(char eliminada) {
-        this.eliminada = eliminada;
-    }
-
-    public char getEliminada() {
-        return eliminada;
-    }    
-    
 }

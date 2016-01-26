@@ -16,8 +16,7 @@ public class Conduce {
     private String fecha;
     private String horaEntrada;
     private String horaSalida;
-    private char eliminado;
-    
+        
     public Conduce(String cedulaEmpleado, String placaBus, String fecha, String horaEntrada, String horaSalida) {
         
         this.cedulaEmpleado = cedulaEmpleado;
@@ -25,7 +24,6 @@ public class Conduce {
         this.fecha = fecha;
         this.horaEntrada = horaEntrada;
         this.horaSalida = horaSalida;
-        this.eliminado = '0';
         
     }
 
@@ -68,13 +66,5 @@ public class Conduce {
     public String getHoraSalida() {
         return horaSalida;
     }   
-
-    public void setEliminado(char eliminado) {
-        this.eliminado = eliminado;
-    }
-
-    public char getEliminado() {
-        return eliminado;
-    }    
     
 }

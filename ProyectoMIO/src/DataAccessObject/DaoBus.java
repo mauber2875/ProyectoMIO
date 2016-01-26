@@ -32,10 +32,17 @@ public class DaoBus extends DataAccessObject {
                 + bus.getCapacidad() + "', '"
                 + bus.getTipo() + "', '"
                 + bus.getParadaRuta() + "', '"
-                + bus.getNombreRuta() + "', '"
-                + bus.getEliminado() + "');";
+                + bus.getNombreRuta() + "', '0');";
         
         executeUpdate(sql);
+        
+    }
+    
+    public ArrayList<Object[]> buscarBus(String placa) throws Excepciones {
+        
+        sql = "SELECT * FROM bus WHERE placa_bus = '" + placa + "' AND eliminado <> '1';";
+        
+        return executeQuery(sql, 8);
         
     }
     
@@ -47,25 +54,24 @@ public class DaoBus extends DataAccessObject {
                 + "capacidad = '" + bus.getCapacidad() + "', "
                 + "tipo = '" + bus.getTipo() + "', "
                 + "parada_ruta = '" + bus.getParadaRuta() + "', "
-                + "nombre_ruta = '" + bus.getNombreRuta() + "', "
-                + "eliminado = '" + bus.getEliminado() + "' "
+                + "nombre_ruta = '" + bus.getNombreRuta() + "' "
                 + "WHERE placa_bus = '" + bus.getPlaca() + "';";
         
         executeUpdate(sql);
         
-    }
-    
+    }   
+        
     public void eliminarBus(String placa) throws Excepciones {
         
         sql = "UPDATE bus SET eliminado = '1' WHERE placa_bus = '" + placa + "';";
         
         executeUpdate(sql);
         
-    }
-    
+    }  
+        
     public ArrayList<Object[]> listarBuses() throws Excepciones {
         
-        sql = "SELECT * FROM bus WHERE eliminado<>'1'";
+        sql = "SELECT * FROM bus WHERE eliminado <> '1'";
         
         return executeQuery(sql, 8);
                 
